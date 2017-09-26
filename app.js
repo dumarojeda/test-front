@@ -7,6 +7,7 @@ app.get('/', function(req, res) {
   res.sendFile(path.join(__dirname + '/view/index.html'));
 });
 
+// Allow assets
 app.use(express.static(path.join(__dirname, 'view')));
 
 // Json

@@ -1,6 +1,10 @@
 var express = require('express');
 var app = express();
 var path = require('path');
+var bodyParser = require("body-parser");
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 // View Home
 app.get('/', function(req, res) {
@@ -23,6 +27,10 @@ app.get('/menu', function(req, res) {
 
   res.contentType('application/json');
   res.send(JSON.stringify(items));
+});
+
+app.post("/postForm", function (req, res) {
+  console.log(req.body);
 });
 
 app.listen(8000, function() {

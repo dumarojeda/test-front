@@ -9,11 +9,42 @@
   <body ng-app="AppTestFront">
 
     <div class="container" ng-controller="appController">
-      <ul class="menu">
-        <li ng-repeat="item in items"><a href="#" ng-click="changeAirplane(item.id, item.name)">{{ item.name }}</a></li>
-      </ul>
+      <div class="row">
+        <div class="col-sm-12">
+          <ul class="menu">
+            <li ng-repeat="item in items"><a href="#" ng-click="changeAirplane(item.id, item.name)">{{ item.name }}</a></li>
+          </ul>
+        </div>
+      </div>
 
-      <div class="welcome">Hola, bienvenido, sabemos que quieres viajar en un <span>{{ airplane }}</span>, por favor diligencia el siguiente formulario.</div>
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+          <div class="welcome">Hola, bienvenido, sabemos que quieres viajar en un <span>{{ airplane }}</span>, por favor diligencia el siguiente formulario.</div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" ng-model="name" placeholder="Nombre completo">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" ng-model="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" ng-model="phone" placeholder="Celular">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" ng-model="age" placeholder="Rango de Edad">
+            </div>
+            <div class="form-button">
+              <button type="submit" class="btn btn-custom" ng-click="sendForm()">Enviar</button>
+            </div>
+          </form>
+          <h1>{{ postDataResponse }}</h1>
+        </div>
+      </div>
     </div>
 
     <!-- AngularJS -->

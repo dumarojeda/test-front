@@ -3,17 +3,15 @@
   <head>
     <meta charset="UTF-8">
     <title>Test Front</title>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body ng-app="AppTestFront">
 
     <div class="container" ng-controller="appController">
-      <div class="jumbotron">
-        <h1>Hola mundo!</h1>
-        <ul>
-          <li ng-repeat="item in items">{{ item.name }}</li>
-        </ul>
-      </div>
+      <ul class="menu">
+        <li ng-repeat="item in items"><a href="#">{{ item.name }}</a></li>
+      </ul>
     </div>
 
     <!-- AngularJS -->

@@ -30,6 +30,16 @@ body {
   text-decoration: none;
 }
 
+/* Welcome */
+.welcome {
+  text-align: center;
+  font-size: 1.5em;
+  margin: 3em 0;
+}
+.welcome span {
+  color: #179ed5;
+}
+
 /* Responsive */
 @media (min-width: 720px) {
   .menu li {

@@ -10,8 +10,10 @@
 
     <div class="container" ng-controller="appController">
       <ul class="menu">
-        <li ng-repeat="item in items"><a href="#">{{ item.name }}</a></li>
+        <li ng-repeat="item in items"><a href="#" ng-click="changeAirplane(item.id, item.name)">{{ item.name }}</a></li>
       </ul>
+
+      <div class="welcome">Hola, bienvenido, sabemos que quieres viajar en un <span>{{ airplane }}</span>, por favor diligencia el siguiente formulario.</div>
     </div>
 
     <!-- AngularJS -->

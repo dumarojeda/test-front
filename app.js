@@ -14,7 +14,11 @@ app.use(express.static(path.join(__dirname, 'view')));
 app.get('/menu', function(req, res) {
   items = [
     {"id": "1", "name": "Boeign"},
-    {"id": "2", "name": "Airbus"}
+    {"id": "2", "name": "Airbus"},
+    {"id": "3", "name": "Bellanca"},
+    {"id": "4", "name": "Chernov"},
+    {"id": "5", "name": "Centrair"},
+    {"id": "6", "name": "Dassault"}
   ];
 
   res.contentType('application/json');
